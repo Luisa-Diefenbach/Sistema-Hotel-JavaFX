@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="400.0" prefWidth="601.0" spacing="10.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.luisa.hotel.controller.ReservaController">
+
+    <children>
+
+        <Label text="Cadastro de Reservas" />
+      <ComboBox fx:id="cbHospede" prefWidth="150.0" />
+      <ComboBox fx:id="cbQuarto" prefWidth="150.0" />
+      <DatePicker fx:id="dpCheckIn" promptText="Check-In" />
+      <DatePicker fx:id="dpCheckOut" promptText="Check-Out" />
+
+        <TextField fx:id="txtValorTotal" promptText="Valor Total" />
+
+        <HBox alignment="CENTER" spacing="10">
+
+            <children>
+            <Button fx:id="btnPesquisar" mnemonicParsing="false" onAction="#pesquisarReserva" text="Pesquisar" />
+            <Button mnemonicParsing="false" onAction="#cadastrarReserva" text="Cadastrar" />
+            <Button mnemonicParsing="false" onAction="#atualizarReserva" text="Atualizar" />
+            <Button mnemonicParsing="false" onAction="#excluirReserva" text="Excluir" />
+
+                <Button fx:id="btnCheckIn" onAction="#realizarCheckIn" text="Check-In" />
+
+                <Button fx:id="btnCheckOut" onAction="#realizarCheckOut" text="Check-Out" />
+
+                <Button fx:id="btnListar" onAction="#listar" text="Listar" />
+            <Button fx:id="btnMenu" mnemonicParsing="false" onAction="#voltarMenu" text="Menu" />
+
+            </children>
+
+        </HBox>
+
+        <TableView fx:id="tbReservas" prefHeight="200.0" prefWidth="550.0">
+
+            <columns>
+            <TableColumn fx:id="colHospede1" prefWidth="100" text="Id" />
+
+                <TableColumn fx:id="colHospede" prefWidth="100" text="Hóspede" />
+
+                <TableColumn fx:id="colQuarto" prefWidth="100" text="Quarto" />
+
+                <TableColumn fx:id="colCheckIn" prefWidth="100" text="Check-In" />
+
+                <TableColumn fx:id="colCheckOut" prefWidth="100" text="Check-Out" />
+
+                <TableColumn fx:id="colValorTotal" prefWidth="120" text="Valor Total" />
+
+            </columns>
+
+        </TableView>
+
+    </children>
+
+</VBox>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.luisa.hotel.controller.MenuController">
+
+    <Button fx:id="btnHospedes" onAction="#abrirHospedes" text="Hóspedes" />
+
+    <Button fx:id="btnQuartos" onAction="#abrirQuartos" text="Quartos" />
+
+    <Button fx:id="btnReservas" onAction="#abrirReservas" text="Reservas" />
+
+    <Button fx:id="btnDashboard" onAction="#abrirDashboard" text="Dashboard" />
+
+    <Button fx:id="btnSair" onAction="#sair" text="Sair" />
+
+</VBox>

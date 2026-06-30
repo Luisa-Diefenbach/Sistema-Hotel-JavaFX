@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.luisa.hotel.controller.DashboardController">
+
+    <children>
+
+        <!-- TÍTULO -->
+        <Label layoutX="260" layoutY="20"
+               text="Dashboard do Hotel"
+               style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+        <!-- INDICADORES -->
+
+        <Label layoutX="50" layoutY="80" text="Hóspedes:"/>
+        <Label fx:id="lblHospedes" layoutX="150" layoutY="80" text="0"/>
+
+        <Label layoutX="50" layoutY="120" text="Quartos:"/>
+        <Label fx:id="lblQuartos" layoutX="150" layoutY="120" text="0"/>
+
+        <Label layoutX="50" layoutY="160" text="Disponíveis:"/>
+        <Label fx:id="lblDisponiveis" layoutX="150" layoutY="160" text="0"/>
+
+        <Label layoutX="50" layoutY="200" text="Ocupados:"/>
+        <Label fx:id="lblOcupados" layoutX="150" layoutY="200" text="0"/>
+
+        <Label layoutX="50" layoutY="240" text="Reservas:"/>
+        <Label fx:id="lblReservas" layoutX="150" layoutY="240" text="0"/>
+
+        <!-- GRÁFICO -->
+        <PieChart fx:id="graficoOcupacao"
+                  layoutX="300"
+                  layoutY="80"
+                  prefHeight="300"
+                  prefWidth="350"/>
+
+    </children>
+
+</AnchorPane>
