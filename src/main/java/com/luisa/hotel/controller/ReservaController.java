@@ -38,10 +38,10 @@ public class ReservaController {
     private TableView<Reserva> tbReservas;
 
     @FXML
-    private TableColumn<Reserva, Integer> colHospede;
+    private TableColumn<Reserva, String> colHospede;
 
     @FXML
-    private TableColumn<Reserva, Integer> colQuarto;
+    private TableColumn<Reserva, String> colQuarto;
 
     @FXML
     private TableColumn<Reserva, String> colCheckIn;
@@ -58,15 +58,17 @@ public class ReservaController {
     public void initialize() {
 
         colHospede.setCellValueFactory(c ->
-                new javafx.beans.property.SimpleIntegerProperty(
-                        c.getValue().getHospede().getId()
-                ).asObject()
+                new javafx.beans.property.SimpleStringProperty(
+                        c.getValue().getHospede().getNome()
+                )
         );
 
         colQuarto.setCellValueFactory(c ->
-                new javafx.beans.property.SimpleIntegerProperty(
-                        c.getValue().getQuarto().getId()
-                ).asObject()
+                new javafx.beans.property.SimpleStringProperty(
+                        c.getValue().getQuarto().getNumero()
+                                + " - "
+                                + c.getValue().getQuarto().getTipo()
+                )
         );
 
         colCheckIn.setCellValueFactory(c ->

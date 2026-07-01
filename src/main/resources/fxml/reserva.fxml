@@ -15,8 +15,8 @@
     <children>
 
         <Label text="Cadastro de Reservas" />
-      <ComboBox fx:id="cbHospede" prefWidth="150.0" />
-      <ComboBox fx:id="cbQuarto" prefWidth="150.0" />
+      <ComboBox fx:id="cbHospede" prefWidth="150.0" promptText="Hospedes" />
+      <ComboBox fx:id="cbQuarto" prefWidth="150.0" promptText="Quarto" />
       <DatePicker fx:id="dpCheckIn" promptText="Check-In" />
       <DatePicker fx:id="dpCheckOut" promptText="Check-Out" />
 
@@ -44,7 +44,7 @@
         <TableView fx:id="tbReservas" prefHeight="200.0" prefWidth="550.0">
 
             <columns>
-            <TableColumn fx:id="colHospede1" prefWidth="100" text="Id" />
+            <TableColumn fx:id="colHospede1" prefWidth="100" text="Id" visible="false" />
 
                 <TableColumn fx:id="colHospede" prefWidth="100" text="Hóspede" />
 
